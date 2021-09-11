@@ -46,6 +46,9 @@ zinit light 'b4b4r07/enhancd'
 zinit load 'junegunn/fzf-bin'
 zinit load 'zdharma/history-search-multi-word'
 
+zinit ice as"program" cp"httpstat.sh -> httpstat" pick"httpstat"
+zinit light b4b4r07/httpstat
+
 function peco-src () {
   local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
   if [ -n "$selected_dir" ]; then

@@ -1,16 +1,16 @@
 # dotfiles
 
-![GitHub Repo stars](https://img.shields.io/github/stars/yoshikawa/dotfiles?style=social)
-![GitHub](https://img.shields.io/github/license/yoshikawa/dotfiles?style=flat-square)
+![GitHub Repo stars](https://img.shields.io/github/stars/Sopharizer/dotfiles?style=social)
+![GitHub](https://img.shields.io/github/license/Sopharizer/dotfiles?style=flat-square)
 
 This is my personal collection of configuration files.
 
 ## Usage
 
-This repository supports MacOSX, Ubuntu!
+This repository supports MacOSX, Ubuntu, Arch linux.
 
 ```sh
-bash -c "$(curl -L https://raw.githubusercontent.com/yoshikawa/dotfiles/main/bin/install.sh)"
+bash -c "$(curl -L https://raw.githubusercontent.com/Sopharizer/dotfiles/main/bin/install.sh)"
 ```
 
 ### Description
