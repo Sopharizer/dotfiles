@@ -25,7 +25,14 @@ eval "$(hub alias -s)"
 # Starship
 eval "$(starship init zsh)"
 
-bindkey "jj" vi-cmd-mode
+# vi-shell
+case ${OSTYPE} in
+    darwin*)
+        bindkey "jj" vi-cmd-mode
+        ;;
+    linux*)
+        bindkey -e
+esac
 
 # plugins
 zinit snippet 'OMZ::plugins/git/git.plugin.zsh'

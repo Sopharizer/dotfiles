@@ -6,7 +6,7 @@ export XDG_CONFIG_HOME=~/.config
 # editor
 export EDITOR=nvim
 export VISUAL=nvim
-export MANPAGER="col -b -x | nvim -R -c 'set ft=man' -"
+export MANPAGER="nvim -c 'set ft=man' -"
 # ls color
 export CLICOLOR=true
 export LSCOLORS='exfxcxdxbxGxDxabagacad'
@@ -22,6 +22,9 @@ if [ -z $TMUX ]; then
 fi
 # haskell
 export PATH="${HOME}/.ghcup/bin:${PATH}"
+
+# AppImage
+export PATH="${HOME}/AppImage:${PATH}"
 
 # alias
 alias cat='bat'
