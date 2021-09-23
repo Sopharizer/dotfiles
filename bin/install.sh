@@ -19,7 +19,7 @@ if [ "${OS_NAME}" == "linux" ]; then
         OS_TYPE="apt"
     elif [ $(echo "${OS_FULL}" | grep -c "coreos") -gt 0 ]; then
         OS_TYPE="apt"
-    elif [ $(echo "${OS_FULL}" | grep -c "arch") -gt 0]; then
+    elif [ $(echo "${OS_FULL}" | grep -c "arch") -gt 0 ]; then
         OS_TYPE="arch"
     fi
 elif [ "${OS_NAME}" == "darwin" ]; then
@@ -38,7 +38,12 @@ elif [ "${OS_TYPE}" == "yum" ]; then
   sudo yum install -y curl file git
   sudo yum install -y libxcrypt-compat
 elif [ "${OS_TYPE}" == "arch" ]; then
+  sudo pacman -S --needed git base-devel
+  git clone https://aur.archlinux.org/yay-bin.git
+  cd yay-bin
+  makepkg -si
   sudo pacman -Syyu
+  yay -Syyu
 fi
 
 if type "git" > /dev/null 2>&1; then

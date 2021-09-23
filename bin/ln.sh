@@ -13,3 +13,6 @@ done
 
 # NeoVim
 ln -sfv ${DOTPATH}/nvim $XDG_CONFIG_HOME
+
+# starship
+ln -sfv ${DOTPATH}/starship.toml $XDG_CONFIG_HOME
