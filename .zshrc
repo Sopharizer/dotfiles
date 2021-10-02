@@ -13,6 +13,7 @@ autoload -Uz _zinit
 case ${OSTYPE} in
   darwin*)
     # Mac Setting
+    eval $(/opt/homebrew/bin/brew shellenv)
     ;;
   linux*)
     # LinuxBrew
@@ -23,6 +24,8 @@ esac
 case $(uname -a) in
   *arch*)
   alias mudt="yay -Syyu && brew upgrade && brew cleanup && rustup update && anyenv update"
+  alias pbcopy='xsel --clipboard --input'
+  alias pbpaste='xsel --clipboard --output'
 esac
 # hub
 eval "$(hub alias -s)"
@@ -116,4 +119,3 @@ bindkey -M vivis 'v'  vi-visual-eol
 bindkey -M vivis 'w'  vi-visual-forward-word
 bindkey -M vivis 'y'  vi-visual-yank
 eval "$(anyenv init -)"
-eval $(/opt/homebrew/bin/brew shellenv)

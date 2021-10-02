@@ -44,6 +44,7 @@ elif [ "${OS_TYPE}" == "arch" ]; then
   makepkg -si
   sudo pacman -Syyu
   yay -Syyu
+  yay -Sy xsel
 fi
 
 if type "git" > /dev/null 2>&1; then
