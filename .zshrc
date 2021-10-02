@@ -116,3 +116,4 @@ bindkey -M vivis 'v'  vi-visual-eol
 bindkey -M vivis 'w'  vi-visual-forward-word
 bindkey -M vivis 'y'  vi-visual-yank
 eval "$(anyenv init -)"
+eval $(/opt/homebrew/bin/brew shellenv)
