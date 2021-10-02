@@ -20,6 +20,10 @@ case ${OSTYPE} in
     ;;
 esac
 
+case $(uname -a) in
+  *arch*)
+  alias mudt="yay -Syyu && brew upgrade && brew cleanup && rustup update && anyenv update"
+esac
 # hub
 eval "$(hub alias -s)"
 # Starship

@@ -6,7 +6,7 @@ export XDG_CONFIG_HOME=~/.config
 # editor
 export EDITOR=nvim
 export VISUAL=nvim
-export MANPAGER="nvim -c 'set ft=man' -"
+export MANPAGER="less"
 # ls color
 export CLICOLOR=true
 export LSCOLORS='exfxcxdxbxGxDxabagacad'
