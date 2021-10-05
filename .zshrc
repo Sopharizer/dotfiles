@@ -26,6 +26,7 @@ case $(uname -a) in
   alias mudt="yay -Syyu && brew upgrade && brew cleanup && rustup update && anyenv update"
   alias pbcopy='xsel --clipboard --input'
   alias pbpaste='xsel --clipboard --output'
+  alias sc='setxkbmap -option -print "ctrl:swapcaps"'
 esac
 # hub
 eval "$(hub alias -s)"
