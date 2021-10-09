@@ -14,6 +14,7 @@ case ${OSTYPE} in
   darwin*)
     # Mac Setting
     eval $(/opt/homebrew/bin/brew shellenv)
+    alias mudt="brew upgrade && brew cleanup && rustupupdate && anyenv update"
     ;;
   linux*)
     # LinuxBrew
