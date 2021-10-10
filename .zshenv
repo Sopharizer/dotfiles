@@ -26,6 +26,9 @@ export PATH="${HOME}/.ghcup/bin:${PATH}"
 # AppImage
 export PATH="${HOME}/AppImage:${PATH}"
 
+# my script
+export PATH="${HOME}/.local/bin"
+
 # alias
 alias cat='bat'
 alias ls='exa'
