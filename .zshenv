@@ -16,6 +16,10 @@ if [ -x "`which go`" ]; then
   export GOPATH=$HOME/go
   export PATH=$PATH:$GOPATH/bin
 fi
+
+# anyenv
+export PATH="$HOME/.anyenv/bin:$PATH"
+
 # TMUX
 if [ -z $TMUX ]; then
   export PATH="${HOME}/local/bin:${PATH}"
@@ -27,7 +31,7 @@ export PATH="${HOME}/.ghcup/bin:${PATH}"
 export PATH="${HOME}/AppImage:${PATH}"
 
 # my script
-export PATH="${HOME}/.local/bin"
+export PATH="${HOME}/.local/bin:${PATH}"
 
 # alias
 alias cat='bat'

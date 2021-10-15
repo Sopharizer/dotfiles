@@ -24,12 +24,14 @@ esac
 
 case $(uname -a) in
   *arch*)
-  alias mudt="yay -Syyu && brew upgrade && brew cleanup && rustup update && anyenv update"
-  alias pbcopy='xsel --clipboard --input'
-  alias pbpaste='xsel --clipboard --output'
-  alias sc='setxkbmap -option -print "ctrl:swapcaps"'
+      alias mudt="yay -Syyu && brew upgrade && brew cleanup && rustup update && anyenv update"
+      alias pbcopy='xsel --clipboard --input'
+      alias pbpaste='xsel --clipboard --output'
+      alias sc='setxkbmap -option -print "ctrl:swapcaps"'
+      ;;
   *microsoft-standard*)
-  alias mudt="sudo apt full-upgrade && sudo apt satisfy && sudo apt autoremove && brew upgrade && brew cleanup && rustup update && anyenv update"
+      alias mudt="sudo apt full-upgrade && sudo apt autoremove && brew upgrade && brew cleanup && rustup update && anyenv update"
+      ;;
 esac
 # hub
 eval "$(hub alias -s)"
