@@ -20,6 +20,9 @@ fi
 # anyenv
 export PATH="$HOME/.anyenv/bin:$PATH"
 
+# ghci
+export PATH="$HOME/.ghcup/bin:$PATH"
+
 # TMUX
 if [ -z $TMUX ]; then
   export PATH="${HOME}/local/bin:${PATH}"
