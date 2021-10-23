@@ -36,6 +36,10 @@ export PATH="${HOME}/AppImage:${PATH}"
 # my script
 export PATH="${HOME}/.local/bin:${PATH}"
 
+# vim/nvim
+export CONFIG="${HOME}/.config"
+export DATA="${HOME}/.cache"
+
 # alias
 alias cat='bat'
 alias ls='exa'
@@ -67,6 +71,7 @@ alias s='ssh'
 alias t='tmux'
 alias u='cd ..'
 alias v='vim'
+alias vs='sudo vim'
 #alias x=''
 alias y='yarn'
 alias z='zsh'
