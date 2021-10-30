@@ -1,4 +1,4 @@
-nnoremap <silent><C-f> :<C-u>Defx<CR>
+nnoremap <Space>f :<C-u>Defx<CR>
 
 call defx#custom#option('_', {
     \ 'columns': 'indent:git:icons:filename',

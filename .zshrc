@@ -14,7 +14,7 @@ case ${OSTYPE} in
   darwin*)
     # Mac Setting
     eval $(/opt/homebrew/bin/brew shellenv)
-    alias mudt="brew upgrade && brew cleanup && rustup update && anyenv update"
+    alias mudt="brew upgrade && brew cleanup && rustup update && asdf plugin update --all"
     ;;
   linux*)
     # LinuxBrew
@@ -124,4 +124,4 @@ bindkey -M vivis 'u'  vi-visual-lowercase-region
 bindkey -M vivis 'v'  vi-visual-eol
 bindkey -M vivis 'w'  vi-visual-forward-word
 bindkey -M vivis 'y'  vi-visual-yank
-eval "$(anyenv init -)"
+. $HOME/.asdf/asdf.sh

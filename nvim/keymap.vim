@@ -1,3 +1,4 @@
+let mapleader = "\<Space>"
 " Clear highlight
 map <C-n> :noh<CR>
 
