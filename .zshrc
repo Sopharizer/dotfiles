@@ -24,7 +24,7 @@ esac
 
 case $(uname -a) in
   *arch*)
-      alias mudt="yay -Syyu && brew upgrade && brew cleanup && rustup update && anyenv update"
+      alias mudt="yay -Syyu && brew update && brew upgrade && brew cleanup && rustup update && asdf update && asdf plugin update --all"
       alias pbcopy='xsel --clipboard --input'
       alias pbpaste='xsel --clipboard --output'
       alias sc='setxkbmap -option -print "ctrl:swapcaps"'
@@ -125,3 +125,5 @@ bindkey -M vivis 'v'  vi-visual-eol
 bindkey -M vivis 'w'  vi-visual-forward-word
 bindkey -M vivis 'y'  vi-visual-yank
 . $HOME/.asdf/asdf.sh
+
+export PATH="$HOME/.poetry/bin:$PATH"

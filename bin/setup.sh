@@ -19,10 +19,10 @@ else
 fi
 
 # zinit
-if [ -d $ZINITTPATH ]; then
-    cd $ZINITTPATH && git pull
+if [ -d $ZINITPATH ]; then
+    cd $ZINITPATH && git pull
 else
-    git clone ${ZINIT_GITHUB_URL}.git $ZINITTPATH
+    git clone ${ZINIT_GITHUB_URL}.git $ZINITPATH
 fi
 
 # symbolic link

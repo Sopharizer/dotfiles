@@ -67,3 +67,6 @@ else
   echo "Install vscode!"
   exit 1
 fi
+
+# asdf
+git clone https://github.com/asdf-vm/asdf.git $HOME/.asdf --branch v0.8.1
