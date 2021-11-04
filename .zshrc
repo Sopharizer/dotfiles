@@ -14,7 +14,7 @@ case ${OSTYPE} in
   darwin*)
     # Mac Setting
     eval $(/opt/homebrew/bin/brew shellenv)
-    alias mudt="brew upgrade && brew cleanup && rustup update && asdf plugin update --all"
+    alias mudt="brew update && brew upgrade && brew cleanup && rustup update && asdf plugin update --all && asdf update && asdf reshim"
     ;;
   linux*)
     # LinuxBrew
@@ -24,7 +24,7 @@ esac
 
 case $(uname -a) in
   *arch*)
-      alias mudt="yay -Syyu && brew update && brew upgrade && brew cleanup && rustup update && asdf update && asdf plugin update --all"
+      alias mudt="yay -Syyu && brew update && brew upgrade && brew cleanup && rustup update && asdf update && asdf plugin update --all && asdf reshim"
       alias pbcopy='xsel --clipboard --input'
       alias pbpaste='xsel --clipboard --output'
       alias sc='setxkbmap -option -print "ctrl:swapcaps"'
