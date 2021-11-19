@@ -127,3 +127,4 @@ bindkey -M vivis 'y'  vi-visual-yank
 . $HOME/.asdf/asdf.sh
 
 export PATH="$HOME/.poetry/bin:$PATH"
+export PATH="/usr/lib/mozc:$PATH"
