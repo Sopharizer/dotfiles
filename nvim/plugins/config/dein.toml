@@ -5,6 +5,9 @@ source ~/.config/nvim/plugins/vim-floaterm.rc.vim
 '''
 
 [[plugins]]
+repo = 'vim-denops/denops.vim'
+
+[[plugins]]
 repo = 'tpope/vim-fugitive'
 
 # syntax for Kotlin
