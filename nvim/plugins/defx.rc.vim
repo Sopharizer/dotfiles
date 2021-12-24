@@ -1,4 +1,6 @@
-nnoremap <Space>f :<C-u>Defx<CR>
+autocmd VimEnter * execute 'Defx'
+" open defx by Space-f
+nnoremap <Space>f :<C-u>Defx .<CR>
 
 call defx#custom#option('_', {
     \ 'columns': 'indent:git:icons:filename',
@@ -8,6 +10,27 @@ call defx#custom#option('_', {
 let g:defx_icons_enable_syntax_highlight = 1
 let g:defx_icons_column_length = 2
 
+function! s:open_defx_if_directory()
+  " This throws an error if the buffer name contains unusual characters like
+  " [[buffergator]]. Desired behavior in those scenarios is to consider the
+  " buffer not to be a directory.
+  try
+    let l:full_path = expand(expand('%:p'))
+  catch
+    return
+  endtry
+
+  " If the path is a directory, delete the (useless) buffer and open defx for
+  " that directory instead.
+  if isdirectory(l:full_path)
+    Defx `expand('%:p')`
+  endif
+endfunction
+
+autocmd!
+
+" It seems like BufReadPost should work for this, but for some reason, I can't
+" get it to fire. BufEnter seems to be more reliable.
 autocmd FileType defx call s:defx_my_settings()
     function! s:defx_my_settings() abort
       nnoremap <silent><buffer><expr> <CR>
@@ -59,3 +82,4 @@ autocmd FileType defx call s:defx_my_settings()
       nnoremap <silent><buffer><expr> cd
      \ defx#do_action('change_vim_cwd')
 endfunction
+autocmd BufEnter * call s:open_defx_if_directory()

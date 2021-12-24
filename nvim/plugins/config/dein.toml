@@ -7,6 +7,7 @@ source ~/.config/nvim/plugins/vim-floaterm.rc.vim
 [[plugins]]
 repo = 'vim-denops/denops.vim'
 
+
 [[plugins]]
 repo = 'tpope/vim-fugitive'
 
@@ -84,6 +85,12 @@ repo = "Shougo/defx.nvim"
 depends = ["defx-git"]
 hook_add = """
 source ~/.config/nvim/plugins/defx.rc.vim
+"""
+
+[[plugins]]
+repo = 'Shougo/ddc.vim'
+hood_add = """
+source ~/.config/nvim/plugins/ddc.rc.vim
 """
 
 [[plugins]]
