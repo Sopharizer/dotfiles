@@ -1,0 +1,532 @@
+{
+    "editor.wordWrap": "on",
+    "window.zoomLevel": 0,
+    "editor.fontFamily": "Ricty, 'Courier New', monospace",
+    //visual studio codeの設定
+    //vsvimが有効ならghでコマンドの説明文を確認できるので使う
+
+    //========================================================================
+    // vim ...            Editorでなら処理待ちが発生せず入力可能
+    // keybinding.json    あらゆる場面で制御可能、入力をすると処理待ち発生
+    // prefix Editor基本操作 (vim)                      -> space
+    //        Editor none Active (keybindings.json)     -> space
+    //        commandparet呼び出し (vim)                -> space
+    //        基本UI操作(keybinding.json)               -> ctrl+space
+    //          exprorer操作(keybinding.json)           -> none 
+    //          サジェスチョン操作(keybindin.json)      ->ctrl
+    //          コマンドパレット操作(keybindin.json)    ->ctrl
+    //        sidebar呼び出し(keybinding.json)          -> cntr+space
+    //        panel呼び出し(keybinding.json)            -> cntr+space
+    //========================================================================
+
+    //========================================================================
+    // vscodeのeditorの設定
+    //========================================================================
+    //----------------------------------------------------------
+    "editor.lineHeight"             : 0,     //1行の高さ
+    "editor.renderLineHighlight"    : "all",                                     //現在の行番号含めて強調表示する
+    "editor.minimap.enabled"        : false,                                     //minimap削除
+    "editor.insertSpaces"           : true,                                     //tabをスペースとして扱う
+    "editor.tabSize"                : 4,     //tabをデフォルトで4にする
+    "editor.renderWhitespace"       : "boundary",                                //エディタ上での空白表示設定
+    "editor.renderControlCharacters": true,                                      //制御文字の表示
+    "editor.cursorBlinking"         : "smooth",                                  //カーソルの点滅をヌルヌルにする
+    "editor.autoIndent"             : true,                                      //autoindentを入れる
+    "editor.fontFamily"             : "Cica,Consolas, 'Courier New', monospace", //font settings
+    "extensions.autoUpdate"         : true,                                      //プラグインを自動アップデート
+    "editor.autoClosingBrackets": "beforeWhitespace",
+    "editor.autoClosingQuotes"  : "beforeWhitespace",
+    "breadcrumbs.enabled"           : false,                                      //パンクズリストはそんなに使わないし非表示
+    "editor.detectIndentation": false,     //indent設定はファイル設定ではなく、自分の設定を優先する
+                                      
+    //zen mode settings
+    "zenMode.fullScreen": true,
+    "zenMode.centerLayout": true,
+    "zenMode.hideActivityBar": true,
+    "zenMode.hideLineNumbers": false,
+    "zenMode.hideTabs": false,
+    "zenMode.hideStatusBar": true,
+    "zenMode.restore": false,
+                                      
+    // "editor.rulers": [80,130],                //目安を表示
+                                      
+    //サジェスチョン
+    "editor.quickSuggestionsDelay":400 ,//入力補完の検出タイミング
+                                      
+    // "editor.quickSuggestions":false,
+    "editor.quickSuggestions": {        //入力補完を自動で表示する 
+          "other"   : true,             //文字列以外
+          "strings" : false,            //文字列
+          "comments": false,            //コメント
+    },  
+                                      
+    "editor.tokenColorCustomizations": {
+      "comments":{
+        "foreground":"#7f9ea0",       //コメントの色
+        "fontStyle": "",
+      }, 
+                                      
+      "functions":{
+        "fontStyle": "underline",
+      },
+    },
+                                      
+    //encodings
+    "files.autoGuessEncoding"       : true,                                      // 有効な場合、ファイルを開くときに文字セット エンコードを推測します。言語ごとに構成することも可能
+    "files.autoSave"                : "off",                                     //ダーティファイルの作成を無効化
+    "files.eol": "auto",                  //既定の改行文字をautoにする
+    //----------------------------------------------------------
+    // vscodeのバージョン管理系
+    //----------------------------------------------------------
+    // ソース管理プロバイダーのセクションを常に表示するかどうか。
+    "scm.alwaysShowProviders": true,
+                                      
+    //----------------------------------------------------------
+    // vscodeの作業環境の設定(おもにタブの設定をvimと近づけるために設定)
+    //----------------------------------------------------------
+    "workbench.editor.labelFormat": "short",
+    "workbench.editor.revealIfOpen": true,
+    "workbench.editor.showIcons": true,
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.editor.tabCloseButton": "left",
+    "workbench.startupEditor": "none",
+    "workbench.editor.openPositioning": "last",
+                                      
+    "explorer.openEditors.visible": 0,
+                                      
+    // エクスプローラーから非表示にするファイル
+    "files.exclude": { 
+      "tags":true,
+      "**/.svn": true,
+      "**/.git": true,
+      "**/.DS_Store": true
+    },
+                                      
+    // ファイル監視から除外するファイル
+    "files.watcherExclude": {
+      "**/.git/objects/**": true,
+      "**/.git/subtree-cache/**": true,
+      "**/node_modules/*/**": true,
+      "**/.svn/**": true,
+      "**/target/**": true,
+    },
+                                      
+    // ファイルブラウザには表示するが、検索から除外する
+    "search.exclude": {
+      "**/node_modules": true,
+      "**/bower_components": true,
+      "**/tmp/cache": true,
+      "tags":true,
+      "**/.svn": true,
+    },
+                                      
+    //----------------------------------------------------------
+    // vscodeのdebugの設定
+    //----------------------------------------------------------
+    "debug.inlineValues": true,
+                                      
+    //----------------------------------------------------------
+    // vscodeのwindowの設定
+    //----------------------------------------------------------
+    "window.zoomLevel"      : 0,
+    "window.newWindowDimensions": "default",
+    "workbench.tips.enabled": false,
+    "C_Cpp.updateChannel"   : "Insiders",
+                                      
+    //vscode sync
+    "sync.forceDownload"        : false,
+    "sync.quietSync"            : false,
+    "sync.askGistName"          : false,
+    "sync.removeExtensions"     : true,
+    "sync.syncExtensions"       : true,
+    "sync.autoDownload"         : false,
+    "sync.autoUpload"           : false,
+                                      
+    // ワークベンチ設定
+    "workbench.editor.showTabs"                  : true,                  // タブを表示
+    "workbench.editor.enablePreview"             : false,                 //毎回新規で開く
+    "workbench.editor.enablePreviewFromQuickOpen": false,                 //毎回新規で開く
+    "workbench.activityBar.visible"              : true,                 // アクティビティバー(左端)を非表示に
+    "workbench.editor.tabSizing"                 : "shrink",              // タブが多い場合,文字を非表示にしてもタブ表示を優先する
+    "workbench.statusBar.visible"                : true,                  // ステータスバー(下端)を表示
+    "workbench.sideBar.location"                 : "left",                // サイドバーを左に
+    "workbench.colorTheme"                       : "One Dark Pro",
+    "workbench.colorCustomizations"           : {
+      "editor.lineHighlightBackground"        : "#002255",                //現在の行の背景色
+      "editor.selectionBackground"            : "#31ca4a77",              //選択業の背景
+      "editor.selectionHighlightBorder"       : "#00e1ff",                //線学業の前背景
+      "editorError.border"                    : "#ff0000",                //エラーの下線の色
+      "tab.activeBorder"                      : "#ffffff",                //アクティブなタブの色
+      "tab.inactiveForeground"                : "#999999",                //アクティブでないタブの色
+      "editorSuggestWidget.selectedBackground": "#4792b4",                //選択しているサジェストの背景色
+      "editorSuggestWidget.foreground"        : "#f1efef",                //選択しているサジェストの文字色
+      "editorWhitespace.foreground": "#8a8888",                           //tab等の制御文字
+    },
+                                      
+    // クラッシュレポートを送信しない
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry"    : false,
+                                      
+                                      
+    //========================================================================
+    //markdown settings
+    //========================================================================
+    "markdown.preview.breaks": true,
+                                      
+    //========================================================================
+    //言語毎の設定
+    //========================================================================
+    //C関係の設定は社内の設定に合わせる
+    "[c]": {
+        "editor.tabSize": 4,
+        "editor.insertSpaces": false,
+    },
+    "[cpp]": {
+        "editor.tabSize": 4,
+        "editor.insertSpaces": false,
+    },
+    "[markdown]": {
+        "editor.tabSize": 2,                //タブサイズの設定
+        "editor.quickSuggestions":true,     //サジェスチョンをすべて有効にする
+        "editor.quickSuggestionsDelay": 0,  //サジェスチョンのディレイ
+    },
+                                      
+    "[json]": {
+        "editor.tabSize":2,
+    },
+                                      
+    //========================================================================
+    //plugin settings
+    //========================================================================
+                                      
+    // scrolloff
+    "scrolloff.alwaysCenter": false,
+    "scrolloff.scrolloff"   : 9,
+                                      
+    //comment-divider
+    "comment-divider.mainHeaderTransform":"titlecase",  //先頭を大文字にする。
+    "comment-divider.subheaderTransform":"titlecase",   //先頭を大文字にする。
+                                      
+    //テキスト校正君
+    "japanese-proofreading.textlint.丸かっこ（）":false,                                //半角カッコを指摘する
+    "japanese-proofreading.textlint.疑問符(？)":false,                                  //疑問符の後に全角スペースが入っているかを指摘する
+    "japanese-proofreading.textlint.かっこ類と隣接する文字の間のスペースの有無": false, //カッコの内側と外側にスペースを入れていないかを指摘する
+    "japanese-proofreading.textlint.全角文字と半角文字の間": false,                     //全角文字と半角文字の間にスペースを入れていないかを指摘する
+    "japanese-proofreading.textlint.全角文字どうし": false,                             //全角文字同市の間にスペースを入れていないか指摘する
+                                      
+    //multiCommand
+    "multiCommand.commands": [
+      {
+      //     //preview画面から戻す
+      //   "command": "multiCommand.previewMarkdownAndUnfocus",
+      //   "sequence": [
+      //     "workbench.action.closeActiveEditor",               //一旦閉じる
+      //     "markdown-preview-enhanced.openPreviewToTheSide",   //再度開き直す
+      //   ],
+      },
+    ],
+                                      
+    //========================================================================
+    //VIM
+    //========================================================================
+    "vim.statusBarColorControl" : false,                     //statusbarの色のコントロールをしない
+    "vim.highlightedyank.enable": true,                      //yankした箇所をハイライト表示にする
+    "vim.highlightedyank.color":"rgba(0, 240, 170, 0.5)",    //yankした時の色
+    "vim.highlightedyank.duration":150,                      //yankした時の色の表示時間
+    "vim.leader"                : "<space>",                 //Map Leaderの設定
+    "vim.autoindent"            : true,                      //autoindent
+    "vim.useSystemClipboard"    : true,                      //system clipboardと同期する
+    "vim.hlsearch"              : true,                      //hlserch
+    "vim.visualstar"            : true,                      //カーソル上にあるワードを"*"で検索
+    "vim.useCtrlKeys"           : true,                      //諸々のctrlキーを使った操作が有効になる
+    "vim.debug.silent": true,                                //アラートを出さない
+    "vim.timeout":1200,                                      //入力のタイムアウト時間
+    // vim plugin有効化
+
+    "vim.easymotion"            : true,                      //easy motionを有効化
+    "vim.surround"              : true,                      //surroundを有効にする
+
+    //easy motion
+    "vim.easymotionMarkerForegroundColorOneChar": "rgba(0,240,170,0.9)",                         //一文字目の色
+    "vim.easymotionMarkerForegroundColorTwoChar": "rgba(0,240,170,0.9)",                         //二文字目の色
+    "vim.easymotionMarkerBackgroundColor"       : "",     //背景色
+    "vim.easymotionMarkerWidthPerChar"          : 19,     //各文字に割り当てられている幅
+    "vim.easymotionMarkerHeight"                : 0,      //マーカーの高さ
+    "vim.easymotionMarkerFontFamily"            : "Cica",    //フォント
+    "vim.easymotionMarkerFontSize"              : "12.5",    //フォントサイズ
+    "vim.easymotionMarkerFontWeight"            : "normal",                                      //フォントの太さ
+    "vim.easymotionKeys"                        : "asdfhjklwqeruioopghty;",                      //マーカーに使用される文字列
+    "vim.easymotionMarkerYOffset"               : 13.5,      //高さのずれ修正
+                                      
+    //================================================================================================================
+    //key map for vim
+    //keybinding.jsonと違いキーの組み合わせで処理待ちが発生しない
+    //keyのデフォルトキーを使い,キー操作を定義したくても
+    //デフォルトのコマンドが有効になる。(例えば、sh→0にしたくてもsのコマンドが有効になっている)
+    //Leaderキーを入力後のコマンドは無視されているので、極力Leaderを活用するようにする。
+    //beforeは必ず定義しなければならないが、afterまたはcommandsでコマンドを呼び出せる。whenによる操作も可能っぽい
+    //================================================================================================================
+                                      
+    //nmap
+    "vim.normalModeKeyBindings": [
+      // {"before": ["s"],"after"               : [""]},      //unmap?
+    ],
+                                      
+    //nnoremap
+    "vim.normalModeKeyBindingsNonRecursive": [
+                                      
+      {"before": ["J"],"after"               : ["1","0","j"]},                                  //移動を早める
+      {"before": ["K"],"after"               : ["1","0","k"]},                                  //移動を早める
+      {"before": ["H"],"after"               : ["0"]},      //端に移動
+      {"before": ["L"],"after"               : ["$"]},      //端に移動
+      {"before": ["<Leader>", "h"],"after"   : ["<C-w>","h"]},                                  //window移動
+      {"before": ["<Leader>", "j"],"after"   : ["<C-w>","j"]},                                  //window移動
+      {"before": ["<Leader>", "k"],"after"   : ["<C-w>","k"]},                                  //window移動
+      {"before": ["<Leader>", "l"],"after"   : ["<C-w>","l"]},                                  //window移動
+      {"before": ["]"],"commands": [{"command": "C_Cpp.PeekDeclaration"}],"when":["editorLangId == c"]},                               //宣言を見る c専用
+      {"before": ["["],"commands": [{"command": "editor.action.peekDefinition"}]},              //定義を見る
+      {"before": ["<Leader>", "s"],"commands": [":split"]},                                     //水平に開く
+      {"before": ["<Leader>", "v"],"commands": [":vsplit"]},                                    //水平にを閉じる
+      {"before": [">"],"commands" : ["editor.action.indentLines"]},                             //インデント調整(repeat可能)
+      {"before": ["<"],"commands" : ["editor.action.outdentLines"]},                            //インデント調整(repeat可能)
+      {"before": ["<Leader>", "u"],"after"   : ["g","t"]},                                      //tab移動
+      {"before": ["<Leader>", "y"],"after"   : ["g","T"]},                                      //tab移動
+      {"before": ["<Leader>", "x"],"commands": [":q!"]},    //tabを閉じる
+      {"before": ["<Leader>", "q"],"commands": [":qa!"]},                                       //すべてを閉じる
+      {"before": ["<Leader>", "w"],"commands": [":wa"]},    //すべてを保存
+      {"before": ["<Leader>","o"],"after"    : ["o","<ESC>"]},                                  //空の行を挿入
+      {"before": ["<Leader>","O"],"after"    : ["O","<ESC>"]},                                  //空の行を挿入
+      {"before": ["<Leader>", "c"],"commands": [{"command": "editor.action.commentLine"}]},     //コメント
+      {"before": ["<Leader>", ":"],"commands": [{"command": "workbench.action.showCommands"}]},    //コマンドパレット
+      {"before": ["<Leader>", ";"],"commands": [{"command": "workbench.action.quickOpen"}]},    //ファイル検索
+                                      
+      {"before": ["<CR>"],"after"    : ["G"]},                                      //最終行へ
+      {"before": ["<BS>"],"after"    : ["g","g"]},                                  //先頭行へ
+                                      
+      // 検索結果を画面中央に
+      {"before": ["n"],"after"    : ["n","z","z"]},                                  
+      {"before": ["N"],"after"    : ["N","z","z"]},                                  
+      {"before": ["*"],"after"    : ["*","z","z"]},                                  
+      {"before": ["#"],"after"    : ["#","z","z"]},                                  
+                                      
+      //Surround
+      {"before": ["s"],"after"               : ["y","s"]},                                    //surround add
+                                      
+      //easy motion
+      {"before": ["f"],"after"               : ["<Leader>","<Leader>","2","s"]},                //easymotion 2s
+                                      
+      //Multi-Cursor Mode
+      //prefix Ctrl 
+      {"before": ["<C-n>",],"after"   : ["g","b"]},         //選択した文字に対して増やす    
+      {"before": ["<C-k>",],"commands": [{"command": "editor.action.insertCursorAbove"}]},      //シンボルをリネーム(mulchipulcursor)   
+      {"before": ["<C-j>",],"commands": [{"command": "editor.action.insertCursorBelow"}]},      //シンボルをリネーム(mulchipulcursor)   
+                                      
+      //外部プラグイン呼び出し
+      {"before": ["<Leader>", "@"],"commands": [{"command": "markdown-preview-enhanced.openPreviewToTheSide"}]},                       //markdownで開く
+    ],
+                  //insert mode
+      "vim.insertModeKeyBindings":[
+        {"before": ["j", "j"],"after": ["<Esc>"]},          //jjでノーマルモードに戻る
+        {"before": [";",";"],"commands": ["editor.action.triggerSuggest"]},                     //;;でサジェストの起動に使う
+        {"before": ["v","L"],"after": ["$","h"]},          //端に移動
+        // {"before": ["<C-h>"],"after"    : ["0"]},              //端に移動
+        // {"before": ["<C-l>"],"after"    : ["$","h"]},          //端に移動
+    ],
+                  // Visual Mode
+      "vim.visualModeKeyBindingsNonRecursive": [
+        //vを押した直後はvのコマンドが残っているので注意
+        //visualmode後にすぐ実行したいものは、二重で定義する。
+        {"before": ["J"],"after"    : ["1","0","j"]},      //移動を早める
+        {"before": ["v","J"],"after": ["1","0","j"]},      //移動を早める
+        {"before": ["K"],"after"    : ["1","0","k"]},      //移動を早める
+        {"before": ["v","K"],"after": ["1","0","k"]},      //移動を早める
+        {"before": ["v"],"after"    : ["a","f"]},          //拡大選択
+        {"before": ["v","v"],"after": ["a","f"]},          //拡大選択
+        {"before": ["H"],"after"    : ["0"]},              //端に移動
+        {"before": ["L"],"after"    : ["$","h"]},          //端に移動
+        {"before": ["v","H"],"after": ["0"]},              //端に移動
+        {"before": ["v","L"],"after": ["$","h"]},          //端に移動
+        {"before": [">"],"commands" : ["editor.action.indentLines"]},                             //インデント調整(repeat可能)
+        {"before": ["<"],"commands" : ["editor.action.outdentLines"]},                            //インデント調整(repeat可能)
+        {"before": ["<Leader>", ":"],"commands": [{"command"  :"workbench.action.showCommands"}]},//コマンドパレット
+        {"before": ["<Leader>", ";"],"commands": [{"command"  :"workbench.action.quickOpen"}]},   //ファイル検索
+        {"before": ["<Leader>", "c"],"commands": [{"command":"editor.action.commentLine"}]},      //コメント
+                                      
+        //Multi-Cursor Mode
+        {"before": ["<C-n>"],"after"   : ["g","b"]},        //選択した文字に対して増やす 
+        {"before": ["<C-l>",],"commands": [{"command": "editor.action.insertCursorAtEndOfEachLineSelected"}]},                         //行末尾にカーソルを出す
+                                      
+        //外部プラグイン呼び出し
+        {"before": ["<Leader>", "b"],"commands": [{"command":"alignment.align"}]},              //揃える
+        {"before": ["<Leader>", "v"],"commands": [{"command":"extension.commentaligner"}]},     //コメントを揃える
+      ],
+                                      
+                  //vimではなくvscode側のキーを有効にする
+    "vim.handleKeys": {
+      "<C-a>": false,                                    //全選択
+      "<C-f>": false,                                    //検索
+      "<C-h>": false,                                    //置換
+    },
+                                      
+    //========================================================================
+    //UI変更で自動で挿入されるやつ
+    //========================================================================
+
+    // ---------- Language ----------
+
+    "[tex]": {
+        // スニペット補完中にも補完を使えるようにする
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        // インデント幅を2にする
+        "editor.tabSize": 2
+    },
+
+    "[latex]": {
+        // スニペット補完中にも補完を使えるようにする
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        // インデント幅を2にする
+        "editor.tabSize": 2
+    },
+
+    "[bibtex]": {
+        // インデント幅を2にする
+        "editor.tabSize": 2
+    },
+
+
+    // ---------- LaTeX Workshop ----------
+
+    // 使用パッケージのコマンドや環境の補完を有効にする
+    "latex-workshop.intellisense.package.enabled": true,
+
+    // 生成ファイルを削除するときに対象とするファイル
+    // デフォルト値に "*.synctex.gz" を追加
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux",
+        "*.bbl",
+        "*.blg",
+        "*.idx",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.out",
+        "*.toc",
+        "*.acn",
+        "*.acr",
+        "*.alg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.ist",
+        "*.fls",
+        "*.log",
+        "*.fdb_latexmk",
+        "*.snm",
+        "*.nav",
+        "*.dvi",
+        "*.synctex.gz"
+    ],
+
+    // 生成ファイルを "out" ディレクトリに吐き出す
+    "latex-workshop.latex.outDir": "out",
+
+    // latex-workshop.latex.recipes: Recipe の定義
+    "latex-workshop.latex.recipes": [
+        // LaTeX(upLaTeX) で書かれた文書のビルドレシピ
+        {
+            "name": "upLaTeX",
+            "tools": [
+                "Latexmk (upLaTeX)"
+            ]
+        },
+        // XeLaTeX で書かれた文書のビルドレシピ
+        {
+            "name": "XeLaTeX",
+            "tools": [
+                "Latexmk (XeLaTeX)"
+            ]
+        },
+        // LaTeX(pLaTeX) で書かれた文書のビルドレシピ
+        {
+            "name": "pLaTeX",
+            "tools": [
+                "Latexmk (pLaTeX)"
+            ]
+        },
+        // LuaLaTeX で書かれた文書のビルドレシピ
+        {
+            "name": "LuaLaTeX",
+            "tools": [
+                "Latexmk (LuaLaTeX)"
+            ]
+        },
+        {
+            "name": "pdfLaTeX",
+            "tools": [
+                "Latexmk (pdfLaTeX)"
+            ]
+        }
+    ],
+
+    // ビルドのレシピに使われるパーツ
+    "latex-workshop.latex.tools": [
+        // XeLaTeX Build
+        {
+            "name": "Latexmk (XeLaTeX)",
+            "command": "latexmk",
+            "args": [
+                "-f", "-gg", "-pv", "-xelatex", "-synctex=1", "-interaction=nonstopmode", "-file-line-error",
+                "-silent",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ],
+        },
+        // upLaTeX Build
+        {
+          "name": "Latexmk (upLaTeX)",
+          "command": "latexmk",
+          "args": [
+            "-f", "-gg", "-pv", "-synctex=1", "-interaction=nonstopmode", "-file-line-error", "%DOC%"
+          ]
+        },
+        // pLaTeX Build
+        {
+          "name": "Latexmk (pLaTeX)",
+          "command": "latexmk",
+          "args": [
+            "-f", "-gg", "-pv", "-latex='platex'", "-latexoption='-kanji=utf8 -no-guess-input-env'", "-synctex=1", "-interaction=nonstopmode", "-file-line-error", "%DOC%"
+          ]
+        },
+        // LuaLaTeX Build
+        {
+          "name": "Latexmk (LuaLaTeX)",
+          "command": "latexmk",
+          "args": [
+            "-f", "-gg", "-pv", "-lualatex", "-synctex=1", "-interaction=nonstopmode", "-file-line-error", "%DOC%"
+          ]
+        },
+        {
+            "name": "Latexmk (pdfLaTeX)",
+            "command": "latexmk",
+            "args": [
+                "-f", "-gg", "-pv", "-pdf", "-synctex=1", "-interaction=nonstopmode", "-file-line-error", "%DOC%"
+            ]
+        }
+    ],
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.latex.autoBuild.run": "never",
+    "latex-workshop.latex.autoClean.run": "onFailed",
+    // latex-workshop.latex.magic.args: マジックコメント付きの LaTeX ドキュメントをビルドする設定
+    // '%!TEX' で始まる行はマジックコメントと呼ばれ、LaTeX のビルド時にビルドプログラムに解釈され、
+    // プログラムの挙動を制御する事ができる。
+    // 参考リンク: https://blog.miz-ar.info/2016/11/magic-comments-in-tex/
+    "latex-workshop.latex.magic.args": [
+      "-f", "-gg", "-pv", "-synctex=1", "-interaction=nonstopmode", "-file-line-error", "%DOC%"
+    ],
+    "explorer.confirmDragAndDrop": false,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
+    "python.showStartPage": false,
+    "security.workspace.trust.untrustedFiles": "open",
+}
