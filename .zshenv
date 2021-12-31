@@ -18,7 +18,7 @@ if [ -x "`which go`" ]; then
 fi
 
 # anyenv
-export PATH="$HOME/.anyenv/bin:$PATH"
+# export PATH="$HOME/.anyenv/bin:$PATH"
 
 # ghci
 export PATH="$HOME/.ghcup/bin:$PATH"
