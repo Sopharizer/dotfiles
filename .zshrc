@@ -14,7 +14,8 @@ case ${OSTYPE} in
   darwin*)
     # Mac Setting
     eval $(/opt/homebrew/bin/brew shellenv)
-    alias mudt="brew update && brew upgrade && brew cleanup && rustup update && asdf plugin update --all && asdf update && asdf reshim && sudo tlmgr update --self --all"
+    alias mudt="sudo tlmgr update --self --all && brew update && brew upgrade && brew cleanup && rustup update && asdf plugin update --all && asdf update && asdf reshim"
+    alias balLock="osascript /Applications/balanceLock.scpt"
     ;;
   linux*)
     # LinuxBrew
