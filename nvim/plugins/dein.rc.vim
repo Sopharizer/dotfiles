@@ -18,6 +18,7 @@ endif
 
 if dein#check_install()
   call dein#install()
+  call dein#check_update(v:true)
 endif
 
 filetype plugin indent on

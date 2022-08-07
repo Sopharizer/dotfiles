@@ -1,4 +1,4 @@
-autoload -Uz promptinit compinit;
+autoload -Uz compinit promptinit;
 promptinit;
 compinit;
 
@@ -20,6 +20,8 @@ case ${OSTYPE} in
   linux*)
     # LinuxBrew
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+    export DENO_INSTALL="/home/sophar_009/.deno"
+    export PATH="$DENO_INSTALL/bin:$PATH"
     ;;
 esac
 
@@ -29,6 +31,8 @@ case $(uname -a) in
       alias pbcopy='xsel --clipboard --input'
       alias pbpaste='xsel --clipboard --output'
       alias sc='setxkbmap -option -print "ctrl:swapcaps"'
+      alias tlmgr='/usr/local/texlive/2022/texmf-dist/scripts/texlive/tlmgr.pl --usermode'
+      alias sysleep='systemctl suspend'
       ;;
   *microsoft-standard*)
       alias mudt="sudo apt full-upgrade && sudo apt autoremove && brew upgrade && brew cleanup && rustup update && anyenv update"
