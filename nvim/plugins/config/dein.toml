@@ -7,25 +7,27 @@ source ~/.config/nvim/plugins/vim-floaterm.rc.vim
 [[plugins]]
 repo = 'vim-denops/denops.vim'
 
+#[[plugins]]
+#repo = 'vim-denops/denops-helloworld.vim'
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
 
 # syntax for Kotlin
-[[plugins]]
-repo = "udalov/kotlin-vim"
+#[[plugins]]
+#repo = "udalov/kotlin-vim"
 
 # syntax for Svelte
-[[plugins]]
-repo = "evanleck/vim-svelte"
+#[[plugins]]
+#repo = "evanleck/vim-svelte"
 
 # syntax for Javascript
 [[plugins]]
 repo = "pangloss/vim-javascript"
 
 # syntax for TypeScript
-[[plugins]]
-repo = "HerringtonDarkholme/yats.vim"
+#[[plugins]]
+#repo = "HerringtonDarkholme/yats.vim"
 
 # syntax for TOML
 [[plugins]]
@@ -36,8 +38,8 @@ repo = "cespare/vim-toml"
 repo = "posva/vim-vue"
 
 # syntax for Stylus
-[[plugins]]
-repo = "wavded/vim-stylus"
+#[[plugins]]
+#repo = "wavded/vim-stylus"
 
 # vim-airline
 [[plugins]]
@@ -80,24 +82,30 @@ repo = "tyru/open-browser-github.vim"
 # Dark Power plugins #########
 ##############################
 # File explorer
+#[[plugins]]
+#repo = "Shougo/defx.nvim"
+#depends = ["defx-git"]
+#hook_add = """
+#source ~/.config/nvim/plugins/defx.rc.vim
+#"""
+
 [[plugins]]
-repo = "Shougo/defx.nvim"
-depends = ["defx-git"]
+repo = 'Shougo/ddu.vim'
 hook_add = """
-source ~/.config/nvim/plugins/defx.rc.vim
+source ~/.config/nvim/plugins/ddu.rc.vim
 """
 
 [[plugins]]
 repo = 'Shougo/ddc.vim'
-hood_add = """
+hook_add = """
 source ~/.config/nvim/plugins/ddc.rc.vim
 """
 
-[[plugins]]
-repo ="kristijanhusak/defx-git"
-hook_add = """
-source ~/.config/nvim/plugins/defx-git.rc.vim
-"""
+#[[plugins]]
+#repo ="kristijanhusak/defx-git"
+#hook_add = """
+#source ~/.config/nvim/plugins/defx-git.rc.vim
+#"""
 
 # Shell interfaces
 [[plugins]]

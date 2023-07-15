@@ -23,6 +23,9 @@ fi
 # ghci
 export PATH="$HOME/.ghcup/bin:$PATH"
 
+# clang
+export PATH="/Library/Developer/CommandLineTools/usr/bin:$PATH"
+
 # TMUX
 if [ -z $TMUX ]; then
   export PATH="${HOME}/local/bin:${PATH}"

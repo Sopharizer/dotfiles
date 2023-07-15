@@ -22,7 +22,7 @@ call ddc#custom#patch_global('sourceParams', {
 
 " Customize settings on a filetype
 call ddc#custom#patch_filetype(['c', 'cpp'], 'sources', ['around', 'clangd'])
-call ddc#custom#ptch_filetype(['c', 'cpp'], 'sourceOptions', {
+call ddc#custom#patch_filetype(['c', 'cpp'], 'sourceOptions', {
       \ 'clangd': {'mark': 'C'},
       \ })
 call ddc#custom#patch_filetype('markdown', 'sourceParams', {
