@@ -13,7 +13,7 @@ let g:defx_icons_column_length = 2
 function! s:open_defx_if_directory()
   " This throws an error if the buffer name contains unusual characters like
   " [[buffergator]]. Desired behavior in those scenarios is to consider the
-  " buffer not to be a directory.
+ buffer not to be a directory.
   try
     let l:full_path = expand(expand('%:p'))
   catch

@@ -33,3 +33,8 @@ function! s:ddu_filter_my_settings() abort
   nnoremap <buffer><silent> q
   \ <Cmd>close<CR>
 endfunction
+
+nnoremap <silent> xdf :Ddu file<cr>
+nnoremap <silent> xdb :Ddu buffer<cr>
+nnoremap <silent> xdr :Ddu file_rec<cr>
+nnoremap <silent> xdc :Ddu colorscheme<cr>

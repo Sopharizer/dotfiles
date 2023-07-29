@@ -94,12 +94,36 @@ repo = 'Shougo/ddu.vim'
 hook_add = """
 source ~/.config/nvim/plugins/ddu.rc.vim
 """
-
+[[plugins]]
+repo='Shougo/ddu-ui-ff'
+[[plugins]]
+repo='Shougo/ddu-source-file_rec'
+[[plugins]]
+repo='Shougo/ddu-source-file'
+[[plugins]]
+repo='Shougo/ddu-filter-matcher_substring'
+[[plugins]]
+repo='Shougo/ddu-kind-file'
+[[plugins]]
+repo='Shougo/ddu-commands.vim'
+[[plugins]]
+repo='4513ECHO/ddu-source-colorscheme'
+[[plugins]]
+repo='shun/ddu-source-buffer'
 [[plugins]]
 repo = 'Shougo/ddc.vim'
 hook_add = """
 source ~/.config/nvim/plugins/ddc.rc.vim
 """
+
+[[plugins]]
+repo = 'Shougo/ddc-source-around'
+
+[[plugins]]
+repo = 'Shougo/ddc-filter-sorter_rank'
+
+[[plugins]]
+repo = 'Shougo/ddc-filter-matcher_head'
 
 #[[plugins]]
 #repo ="kristijanhusak/defx-git"

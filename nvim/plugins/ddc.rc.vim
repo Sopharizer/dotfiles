@@ -1,6 +1,6 @@
 " Customize global settings
 " Use around source.
-" https://github.com/Shougo/ddc-around
+" https://github.com/Shougo/ddc-source-around
 call ddc#custom#patch_global('sources', ['around'])
 
 " Use matcher_head and sorter_rank.
