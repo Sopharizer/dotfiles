@@ -43,6 +43,12 @@ export PATH="${HOME}/.local/bin:${PATH}"
 export CONFIG="${HOME}/.config"
 export DATA="${HOME}/.cache"
 
+# LaTeX
+export TEXLIVE=/usr/local/texlive
+export PATH=$TEXLIVE/bin/x86_64-linux:$PATH
+export MANPATH=$TEXLIVE/texmf-dist/doc/man:$MANPATH
+export INFOPATH=$TEXLIVE/texmf-dist/doc/info:$INFOPATH
+
 # alias
 alias cat='bat'
 alias ls='exa'

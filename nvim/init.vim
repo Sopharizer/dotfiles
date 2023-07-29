@@ -1,5 +1,6 @@
 let g:python_host_prog = '~/.asdf/shims/python2'
 let g:python3_host_prog = '~/.asdf/shims/python3'
+let g:dein#install_github_api_token = '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'
 
 runtime! plugins/dein.rc.vim
 runtime! keymap.vim
