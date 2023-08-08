@@ -88,6 +88,7 @@ alias z='zsh'
 alias edit='code'
 # NeoVim
 alias vim=nvim
+alias vd='nvim -d'
 # fzf
 alias pj='cd $(ghq list -p | fzf)'
 alias gopn='hub browse $(ghq list | peco | cut -d "/" -f 2,3,4)'
